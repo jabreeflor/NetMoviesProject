@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\irdav\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\irdav\\.nuget\\packages"
+    ]
+  }
+}

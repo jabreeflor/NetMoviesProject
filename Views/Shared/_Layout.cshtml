@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.CSS" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="nav nav-pills">
+        <a class="nav-items nav-link active" href="/">Home</a>
+
+        <a class="nav-item nav-link" asp-controller="Home" asp-action="About">About</a>
+
+        <nav />
+    </div>
+
+    <header class="jumbotron">
+        <img id="logo" alt="The Movies"
+             src="https://i.ytimg.com/vi/06RX7Wh-_48/maxresdefault.jpg"
+             height="200" />
+        <h1 class="col-sm-5">@ViewBag.Title</h1>
+
+
+
+    </header>
+
+
+    @RenderBody()
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

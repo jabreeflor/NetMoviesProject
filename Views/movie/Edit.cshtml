@@ -1,0 +1,61 @@
+﻿@model Movie
+@{
+    string title = ViewBag.Action + " movie";
+    ViewBag.Title = title;
+}
+
+<h2>@title</h2>
+
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Title">Name</label>
+        <input asp-for="Title" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Year">Year</label>
+        <input asp-for="Year" class="form-control">
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label asp-for="Rating">Rating</label>
+        <input asp-for="Rating" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Runtime">Runtime</label>
+        <input asp-for="Runtime" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Actors">Actors/Actresses</label>
+        <input asp-for="Actors" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="ListsID">Genre</label>
+        <select asp-for="ListsID" class="form-control">
+            <option value="">Please select movie Genre</option>
+            @foreach (Lists s in ViewBag.Lists)
+            {
+                <option value="@s.ListsID">
+                    @s.mTitle
+                </option>
+            }
+        </select>
+
+    </div>
+
+
+
+    <input type="hidden" asp-for="MovieId" />
+
+    <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Cancel</a>
+</form>
